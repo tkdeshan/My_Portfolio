@@ -302,12 +302,13 @@ nav ul li a.active {
   width: 70px;
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 5px;
+  padding-top: 15px;
   padding-bottom: 5px;
   border-radius: 5px;
   font-size: 50px;
   background-color: orange;
   margin: 5px;
+  line-height: 0.5;
 }
 
 #skills .set .con2 i span {
