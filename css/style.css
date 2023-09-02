@@ -275,10 +275,6 @@ nav ul li a.active {
 }
 
 /* skill sectio */
-#skills {
-  height: 100vh;
-}
-
 #skills .set {
   display: flex;
   flex-direction: row;
