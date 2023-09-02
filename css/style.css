@@ -113,12 +113,12 @@ nav ul li a.active {
   color: orange;
 }
 
-#about #item2 .contactlist{
+#about #item2 .contactlist {
   display: flex;
   flex-direction: row;
 }
 
-#about #item2 .private{
+#about #item2 .private {
   display: flex;
   align-items: center;
 }
@@ -184,13 +184,16 @@ nav ul li a.active {
   border-radius: 50%;
 }
 
+#education .courses .details .content p a {
+  color: blue;
+}
+
 #education .edu h1,
 #education .courses h1 {
   text-decoration: underline;
   text-underline-offset: 6px;
   text-decoration-color: orange;
 }
-
 
 /* portfolio section */
 #portfolio {
@@ -233,11 +236,11 @@ nav ul li a.active {
 
 #portfolio .projectDisplay {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 50px; 
-  justify-content: center; 
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  justify-content: center;
   text-align: center;
-  justify-items: center; 
+  justify-items: center;
   align-content: center;
 }
 #portfolio .project {
@@ -276,11 +279,11 @@ nav ul li a.active {
   height: 100vh;
 }
 
-#skills .set{
+#skills .set {
   display: flex;
   flex-direction: row;
 }
-#skills .set .con1 img{
+#skills .set .con1 img {
   width: 500px;
   height: 380px;
 }
@@ -295,8 +298,7 @@ nav ul li a.active {
   flex-direction: column;
 }
 
-
-#skills .set .con2 i{
+#skills .set .con2 i {
   width: 70px;
   padding-left: 10px;
   padding-right: 10px;
@@ -308,18 +310,15 @@ nav ul li a.active {
   margin: 5px;
 }
 
-#skills .set .con2 i span{
+#skills .set .con2 i span {
   font-size: 15px;
 }
 
-
-#skills .set h1{
+#skills .set h1 {
   text-decoration: underline;
   text-underline-offset: 6px;
   text-decoration-color: orange;
 }
-
-
 
 /* other section */
 #other {
@@ -329,19 +328,18 @@ nav ul li a.active {
   align-items: center;
 }
 
-
-#other h2{
+#other h2 {
   text-decoration: underline;
   text-underline-offset: 6px;
   text-decoration-color: orange;
 }
 
-#other p span{
+#other p span {
   font-weight: bold;
   font-size: 20px;
 }
 
-#other ul li p a{
+#other ul li p a {
   color: blue;
 }
 
