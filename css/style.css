@@ -251,7 +251,7 @@ nav ul li a.active {
 }
 
 #portfolio .project img {
-  width: 200px;
+  width: 300px;
   height: 200px;
 }
 
@@ -280,6 +280,10 @@ nav ul li a.active {
   display: flex;
   flex-direction: row;
 }
+#skills .set .con1 img{
+  width: 500px;
+  height: 380px;
+}
 
 #skills .set .con2 {
   width: 70%;
@@ -293,6 +297,7 @@ nav ul li a.active {
 
 
 #skills .set .con2 i{
+  width: 70px;
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 5px;
