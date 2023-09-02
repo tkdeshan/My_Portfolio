@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kavinda Deshan - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+T/mTo6d5mGR1bFfDw49O4C4N/3tBkurLr/J2Cq4Fp1BM2uW" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-pzjwJ5v+3elR5lX+Rnj4hq5O5lEjWd/dzga6J55Z6fw1yz4F5LDEvZ1F8N/KJWcDPi6jK56xsozfeiSnRJea4w=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Pacifico"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+      function scrollToTop() {
+        window.scrollTo({
+          top: 60,
+          behavior: 'smooth',
+        });
+      }
+
+      // Function to highlight the active link in the navigation
+      function highlightActiveLink() {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav ul li a');
+
+        // Determine which section is currently in view
+        let currentSectionId = '';
+        sections.forEach((section) => {
+          const rect = section.getBoundingClientRect();
+          if (rect.top >= 0 && rect.top <= 200) {
+            currentSectionId = section.id;
+          }
+        });
+
+        // Remove active class from all nav links
+        navLinks.forEach((link) => {
+          link.classList.remove('active');
+        });
+
+        // Add active class to the corresponding nav link
+        navLinks.forEach((link) => {
+          if (link.getAttribute('href').substring(1) === currentSectionId) {
+            link.classList.add('active');
+          }
+        });
+      }
+
+      // Listen for scroll events and update the active link
+      window.addEventListener('scroll', highlightActiveLink);
+
+      // Initial call to highlightActiveLink to set the active link on page load
+      highlightActiveLink();
+
+      // select projects
+      document.addEventListener('DOMContentLoaded', function () {
+        const filterButtons = document.querySelectorAll('.filter-button');
+        const projects = document.querySelectorAll('.project');
+
+        // Add click event listeners to the filter buttons
+        filterButtons.forEach((button) => {
+          button.addEventListener('click', () => {
+            // Remove the 'active' class from all buttons
+            filterButtons.forEach((btn) => btn.classList.remove('active'));
+
+            // Add 'active' class to the clicked button
+            button.classList.add('active');
+
+            // Get the filter value from the data attribute
+            const filter = button.getAttribute('data-filter');
+
+            // Show or hide projects based on the filter value
+            projects.forEach((project) => {
+              if (filter === 'all' || project.classList.contains(filter)) {
+                project.style.display = 'block';
+              } else {
+                project.style.display = 'none';
+              }
+            });
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1 id="my"><a href="#about">Kavinda Deshan</a></h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#other">Other</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="about">
+      <div id="item1">
+        <img src="img/dp.png" alt="dp" />
+      </div>
+      <div id="item2">
+        <h1>About Me</h1>
+        <br />
+        <h2>BSc in Physical Science (University of Kelaniya)</h2>
+        <br />
+        <p>
+          Hello! I'm Kavinda Deshan, an enthusiastic Tech Lead who thrives on
+          the bleeding edge of technology, has a knack for leadership, and a
+          deep-seated passion for both teaching and learning. In the dynamic
+          landscape of IT, I've sharpened my skills in mobile and web
+          development with a particular affinity for React Native, React JS, and
+        </p>
+        <br />
+        <p>
+          Hello! I'm Samitha Nanayakkara, an enthusiastic Tech Lead who thrives
+          on the bleeding edge of technology, has a knack for leadership, and a
+          deep-seated passion for both teaching and learning. In the dynamic
+          landscape of IT, I've sharpened my skills in mobile and web
+          development with a particular affinity for React Native, React JS, and
+        </p>
+        <br />
+        <h3>Contact Me</h3>
+        <div class="contactlist">
+          <div class="private">
+            <div>
+              <h4>
+                <a href="mailto:tkdeshan1103@gmail.com"
+                  ><i class="far fa-envelope"></i> tkdeshan1103@gmail.com</a
+                ><br />
+                <a href="tel:+94769011856"
+                  ><i class="fas fa-phone"></i> 0769011856</a
+                >
+              </h4>
+            </div>
+          </div>
+          <div class="social-media">
+            <a
+              href="https://www.linkedin.com/in/kavinda-deshan-265304214"
+              target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="https://github.com/tkdeshan" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/kavinda.deshan.334"
+              target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="https://www.instagram.com/tkdeshan/" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+        <br />
+        <a href="img/kavinda_resume.pdf" download="your-file-name.pdf">
+          <button id="download">
+            <i class="fas fa-download"></i> Download Resume
+          </button>
+        </a>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="edu">
+        <h1>Education</h1>
+        <div class="details">
+          <div class="image">
+            <img src="img/uoklogo.png" alt="uok" />
+          </div>
+          <div class="content">
+            <p style="font-size: 25px; font-weight: bold">
+              University of Kelaniya
+            </p>
+            <p style="font-size: 20px; font-weight: bold">
+              BSc in Physical Science
+            </p>
+            <p>Subjects : Computer Studies | Electronics | Physics</p>
+            <p>Graduated : Pending Results</p>
+          </div>
+        </div>
+        <br />
+        <div class="details">
+          <div class="image">
+            <img src="img/alosiuslogo.png" alt="aloysius" />
+          </div>
+          <div class="content">
+            <p style="font-size: 25px; font-weight: bold">
+              St. Aloysius’ College, Galle
+            </p>
+            <p style="font-size: 20px; font-weight: bold">
+              G.C.E. Advanced Level
+            </p>
+            <p>Year : 2018</p>
+            <p>Subjects : Mathematics | Chemistry | Physics</p>
+            <p>Results : ACC</p>
+          </div>
+        </div>
+        <br />
+        <div class="details">
+          <div class="image">
+            <img src="img/dutugemunulogo.png" alt="dutugemunu" id="curve" />
+          </div>
+          <div class="content">
+            <p style="font-size: 25px; font-weight: bold">
+              G/Dutugemunu National School
+            </p>
+            <p style="font-size: 20px; font-weight: bold">
+              G.C.E. Ordinary Level
+            </p>
+            <p>Year : 2014</p>
+          </div>
+        </div>
+        <br />
+        <div class="details">
+          <div class="image">
+            <img src="img/vijayalogo.png" alt="vijaya" id="curve" />
+          </div>
+          <div class="content">
+            <p style="font-size: 25px; font-weight: bold">
+              G/Vijaya Junior School
+            </p>
+            <p>Year : 2003 - 2008</p>
+          </div>
+        </div>
+        <br />
+      </div>
+      <div class="courses">
+        <h1>Courses</h1>
+        <div class="details">
+          <div class="image">
+            <img src="img/uomlogo.png" alt="uom" />
+          </div>
+          <div class="content">
+            <p style="font-size: 25px; font-weight: bold">
+              University of Moratuwa
+            </p>
+            <p style="font-size: 20px; font-weight: bold">
+              Trainee - Full Stack Developer
+            </p>
+            <p>
+              Issued : 2023
+              <a
+                href="https://drive.google.com/drive/folders/1212PmW4BZJkVrhFYkpYMLlJh6tk8YN2K?usp=drive_link"
+                target="_blank"
+                >cirtificates</a
+              >
+            </p>
+            <br />
+            <p style="font-size: 20px; font-weight: bold">
+              Microcontroller-Based System Design
+            </p>
+            <p>
+              Issued : September 2021
+              <a
+                href="https://ent.uom.lk/verify/?rid=10UQbfDvCdXiDIhcfKKp1bHwlfSE3dkL-"
+                target="_blank"
+                >cirtificate</a
+              >
+            </p>
+          </div>
+        </div>
+        <br />
+        <div class="details">
+          <div class="image">
+            <img src="img/greatlearn.png" alt="greatlearn" />
+          </div>
+          <div class="content">
+            <p style="font-size: 25px; font-weight: bold">Great Learning</p>
+            <p style="font-size: 20px; font-weight: bold">Java Programming</p>
+            <p>
+              Issued : August 2021
+              <a
+                href="https://drive.google.com/file/d/1F5TbRHo3pUea8q4HQT8G3-5lrDrKKCAc/view?usp=drive_link"
+                target="_blank"
+                >cirtificate</a
+              >
+            </p>
+            <br />
+            <p style="font-size: 20px; font-weight: bold">Git Tutorial</p>
+            <p>
+              Issued : August 2021
+              <a
+                href="https://drive.google.com/file/d/1o7LQq9oxVPscnfcEPEfDMBwGilsNQ5vr/view?usp=drive_link"
+                target="_blank"
+                >cirtificate</a
+              >
+            </p>
+          </div>
+        </div>
+        <br />
+        <div class="details">
+          <div class="image">
+            <img src="img/americanlogo.png" alt="american" id="curve" />
+          </div>
+          <div class="content">
+            <p style="font-size: 25px; font-weight: bold">American Center</p>
+            <p style="font-size: 20px; font-weight: bold">
+              3D Modeling & Manufacturing Program
+            </p>
+            <p>
+              Issued : February 2022
+              <a
+                href="https://drive.google.com/file/d/1G0HOLAexw5mKFXHO7gSu2-A13ulSwBME/view?usp=sharing"
+                target="_blank"
+                >cirtificate</a
+              >
+            </p>
+            <br />
+            <p style="font-size: 20px; font-weight: bold">Makerspace Program</p>
+            <p>
+              Issued : March 2021
+              <a
+                href="https://drive.google.com/file/d/1iNZVGffBgdy8v_w9JElxTP7E6jX_SJj_/view?usp=sharing"
+                target="_blank"
+                >cirtificate</a
+              >
+            </p>
+          </div>
+        </div>
+        <br />
+        <div class="details">
+          <div class="image">
+            <img src="img/ii.png" alt="ii" id="curve" />
+          </div>
+          <div class="content">
+            <p style="font-size: 25px; font-weight: bold">
+              Institute of Innovators
+            </p>
+            <p style="font-size: 20px; font-weight: bold">Arduino Codecamp</p>
+            <p>
+              Issued : June 2021
+              <a
+                href="https://drive.google.com/file/d/1p-H-4v8GW8VDTaPI45p1RXQgHiBd_Um7/view?usp=sharing"
+                target="_blank"
+                >cirtificate</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="project-buttons">
+        <button class="filter-button" data-filter="all">All</button>
+        <button class="filter-button" data-filter="web">Web</button>
+        <button class="filter-button" data-filter="mobile">Mobile</button>
+        <button class="filter-button" data-filter="desktop">Desktop</button>
+        <button class="filter-button" data-filter="embedded">
+          Embedded System
+        </button>
+      </div>
+
+      <div class="projectDisplay">
+        <div class="project web">
+          <img src="img/proj1.png" alt="proj" /><br />
+          <h1>Project 1</h1>
+          <p>description about the project</p>
+          <br />
+          <a href="projects/project1.html">Read More</a><br /><br />
+          <div class="sk">
+            <button>HTML</button>
+            <button>CSS</button>
+            <button>JavaScript</button>
+            <button>ReactJs</button>
+          </div>
+        </div>
+
+        <div class="project web">
+          <img src="img/proj1.png" alt="proj" /><br />
+          <h1>Project 1</h1>
+          <p>description about the project</p>
+          <br />
+          <a href="projects/project1.html">Read More</a><br /><br />
+          <div class="sk">
+            <button>HTML</button>
+            <button>CSS</button>
+            <button>JavaScript</button>
+            <button>ReactJs</button>
+          </div>
+        </div>
+
+        <div class="project web">
+          <img src="img/proj1.png" alt="proj" /><br />
+          <h1>Project 1</h1>
+          <p>description about the project</p>
+          <br />
+          <a href="projects/project1.html">Read More</a><br /><br />
+          <div class="sk">
+            <button>HTML</button>
+            <button>CSS</button>
+            <button>JavaScript</button>
+            <button>ReactJs</button>
+          </div>
+        </div>
+
+        <div class="project web">
+          <img src="img/proj1.png" alt="proj" /><br />
+          <h1>Project 1</h1>
+          <p>description about the project</p>
+          <br />
+          <a href="projects/project1.html">Read More</a><br /><br />
+          <div class="sk">
+            <button>HTML</button>
+            <button>CSS</button>
+            <button>JavaScript</button>
+            <button>ReactJs</button>
+          </div>
+        </div>
+
+        <div class="project mobile">
+          <img src="img/proj1.png" alt="proj" /><br />
+          <h1>Project 1</h1>
+          <p>description about the project</p>
+          <br />
+          <a href="projects/project1.html">Read More</a><br /><br />
+          <div class="sk">
+            <button>HTML</button>
+            <button>CSS</button>
+            <button>JavaScript</button>
+            <button>ReactJs</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="set">
+        <div class="con1">
+          <h1>Tools & technology</h1>
+          <img src="img/programmer.gif" alt="programmer">
+        </div>
+        <div class="con2">
+          <p>Full Stack Development</p>
+          <div class="skill-set">
+           <img src="img/html.png" alt="html" title="HTML">   
+           <img src="img/css.png" alt="css">
+           <img src="img/js.png" alt="js">
+           <img src="img/php.png" alt="php">
+           <img src="img/node.png" alt="node"><br>
+           <img src="img/angular.png" alt="angula">   
+           <img src="img/python.jpeg" alt="python">        
+          </div>
+          <ul>
+            <li>Web Development</li>
+            <li>Mobile App Development</li>
+          </ul>
+        </div>
+      </div>
+      <div class="set">
+        <h1>Soft Skills</h1>
+        <ul>
+          <li>communication</li>
+          <li>sharing knowledge</li>
+        </ul>
+      </div>
+      <div class="set">
+        <h1>Language</h1>
+        <ul>
+          <li>Sinhala</li>
+          <li>English</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="other">
+      <div class="content">
+        <h2>Volunteer Work</h2><br>
+      <p>
+        <span>Instructor</span><br>
+        Inventors Society - G/Dutugemunu National School <br>
+        December 2021 - Present
+      </p>
+      <ul>
+        <li>
+          Organized several workshops to provide training and guidance on the utilization of Embedded Systems for the development of innovative products.
+          <a href="https://drive.google.com/drive/folders/1kkAOleFsZ3P_2VXuTjijk7srRkxxJI0A" target="_blank">view</a>
+        </li>
+        <li>
+          Authored a book specifically addressing the basic knowledge of this subject matter for the school library.
+          <a href="https://drive.google.com/file/d/1j65DJe1j3Gzac_Oq1bX4gIdKSqkpGfes/view" target="_blank">view book</a>
+        </li>
+      </ul>
+      </div>
+      
+    </section>
+
+    <footer>
+      <button id="scrollToTopBtn" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up"></i></button
+      ><br /><br />
+      <div class="social-media">
+        <a href="mailto:tkdeshan1103@gmail.com" title="tkdeshan1103@gmail.com"
+          ><i class="far fa-envelope"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/kavinda-deshan-265304214"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/tkdeshan" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://www.facebook.com/kavinda.deshan.334" target="_blank"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a href="https://www.instagram.com/tkdeshan/" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
+      <br />
+      <p id="copyright">
+        Copyright &copy; 2023 by Kavinda Deshan, All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>

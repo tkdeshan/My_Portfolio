@@ -1,0 +1,55 @@
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin-left: 250px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+#backHome {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  background: rgb(74, 74, 68);
+  color: white;
+  padding: 20px;
+  border-radius: 50%;
+}
+
+#title {
+  font-size: 20px;
+}
+
+ul li {
+  color: #aca7a7;
+}
+
+ul li p {
+  color: rgb(74, 74, 68);
+}
+
+ul #link {
+  list-style-type: none;
+}
+
+ul #link a {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: rgb(74, 74, 68);
+  color: white;
+}
+
+ul li span {
+  color: rgb(70, 70, 66);
+}
