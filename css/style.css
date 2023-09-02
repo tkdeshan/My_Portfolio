@@ -268,6 +268,7 @@ nav ul li a.active {
   border: none;
   border-radius: 10px;
   padding: 5px;
+  margin-bottom: 5px;
 }
 
 /* skill sectio */
@@ -281,14 +282,31 @@ nav ul li a.active {
 }
 
 #skills .set .con2 {
-  margin-left: 200px;
-  margin-top: 50px;
+  width: 70%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
 }
 
 
-#skills .set .con2 p{
-  font-size: 30px;
+#skills .set .con2 i{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  font-size: 50px;
+  background-color: orange;
+  margin: 5px;
 }
+
+#skills .set .con2 i span{
+  font-size: 15px;
+}
+
 
 #skills .set h1{
   text-decoration: underline;
@@ -296,15 +314,7 @@ nav ul li a.active {
   text-decoration-color: orange;
 }
 
-#skills .skill-set{
-  text-align: center;
-}
 
-#skills .skill-set img {
-  width: 50px;
-  border-radius: 50%;
-  padding: 5px;
-}
 
 /* other section */
 #other {
