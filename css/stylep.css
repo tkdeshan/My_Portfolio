@@ -34,7 +34,9 @@ body {
 ul li {
   color: #aca7a7;
 }
-
+ul #link{
+  padding-bottom: 20px;
+}
 ul li p {
   color: rgb(74, 74, 68);
 }
@@ -55,3 +57,4 @@ ul #link a {
 ul li span {
   color: rgb(70, 70, 66);
 }
+
