@@ -45,23 +45,30 @@ header a {
   color: white;
 }
 
-nav ul {
+.navbar ul {
   list-style: none;
   display: flex;
   margin-right: 100px;
 }
 
-nav ul li {
+.navbar ul li {
   margin: 0 10px;
 }
 
-nav ul li a {
+.navbar ul li a {
   text-decoration: none;
   color: white;
 }
 
-nav ul li a:hover {
+.navbar ul li a:hover {
   color: orange;
+}
+
+#menu-btn {
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+  display: none;
 }
 
 /* common */
@@ -73,11 +80,12 @@ section {
 
 /* about section */
 #about {
-  height: 100vh;
+
   display: flex;
   flex-direction: row;
   justify-content: center;
   background-color: #ddd;
+  padding-bottom: 50px;
 }
 
 #about #item1 {
@@ -278,7 +286,7 @@ nav ul li a.active {
 }
 
 /* skill sectio */
-#skills{
+#skills {
   display: flex;
   flex-direction: row;
 }
@@ -286,6 +294,10 @@ nav ul li a.active {
 #skills .set {
   display: flex;
   flex-direction: column;
+}
+
+#skills .set .con1d{
+  display: none;
 }
 #skills .set .con1 img {
   width: 400px;
@@ -384,4 +396,94 @@ footer .social-media a:hover {
 
 footer #copyright {
   color: white;
+}
+
+/* Media query for tablets and larger phones */
+@media screen and (max-width: 1024px) {
+  #about {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #about #item2 .contactlist {
+    flex-direction: column;
+  }
+
+  #about #item2 .social-media {
+    padding-left: 0px;
+  }
+
+  #education {
+    flex-direction: column;
+  }
+
+  #portfolio .projectDisplay {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #menu-btn {
+    margin-right: 50px;
+    display: inline-block;
+    transition: 0.2s linear;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background-color:rgb(48, 48, 47);
+    transition: 0.2s linear;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header .navbar ul{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  #menu-btn.fa-times {
+    transform: rotate(90deg);
+  }
+
+  header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  header .navbar a {
+    display: block;
+    margin: 2rem;
+    text-align: center;
+  }
+
+  #portfolio .projectDisplay {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #skills .set .con1h {
+    display: none;
+  }
+
+  #skills .set .con1d {
+    display: block;
+
+  }
+  #skills .set .con1d .myskill{
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  }
+
+
+  #skills .set .con2 {
+    display: none;
+  }
+
+  #other {
+    height: auto;
+  }
 }

@@ -100,7 +100,7 @@
   <body>
     <header>
       <h1 id="my"><a href="#about">Kavinda Deshan</a></h1>
-      <nav>
+      <nav class="navbar">
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#education">Education</a></li>
@@ -109,7 +109,23 @@
           <li><a href="#other">Other</a></li>
         </ul>
       </nav>
+      <div id="menu-btn" class="fas fa-bars"></div>
     </header>
+
+    <script>
+      let menu = document.querySelector('#menu-btn');
+      let navbar = document.querySelector('header .navbar');
+
+      menu.onclick = () => {
+        menu.classList.toggle('fa-times');
+        navbar.classList.toggle('active');
+      };
+
+      window.onscroll = () => {
+        menu.classList.remove('fa-times');
+        navbar.classList.remove('active');
+      };
+    </script>
 
     <section id="about">
       <div id="item1">
@@ -558,9 +574,48 @@
 
     <section id="skills">
       <div class="set">
-        <div class="con1">
+        <div class="con1 con1h">
           <h1>Tools & technology</h1>
           <img src="img/programmer.gif" alt="programmer" />
+        </div>
+        <div class="con1d">
+          <h1>Tools & technology</h1>
+          <div class="myskill">
+            <div>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Bootstrap</li>
+                <li>TypeScript</li>
+                <li>Angular</li>
+                <li>ReactJs</li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li>PHP</li>
+                <li>Node.js</li>
+                <li>REST API</li>
+                <li>MSSql</li>
+                <li>MongoDB</li>
+                <li>Angular</li>
+                <li>MySql</li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li>Python</li>
+                <li>C</li>
+                <li>C#</li>
+                <li>C++</li>
+                <li>Java</li>
+                <li>Git</li>
+                <li>GitHub</li>
+              </ul>
+            </div>
+          </div>
+          
         </div>
         <div class="con1">
           <h1>Soft Skills</h1>
