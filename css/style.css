@@ -28,7 +28,7 @@ header {
   color: white;
   padding: 2px 2px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   z-index: 100;
 }
