@@ -26,7 +26,7 @@ header {
   top: 0;
   background-color: rgb(48, 48, 47);
   color: white;
-  padding: 2px 0;
+  padding: 2px 2px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -369,16 +369,6 @@ footer {
   padding-bottom: 20px;
 }
 
-#scrollToTopBtn {
-  background-color: orange;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 30px;
-}
-
 footer .social-media {
   display: flex;
   gap: 20px;
@@ -396,6 +386,19 @@ footer .social-media a:hover {
 
 footer #copyright {
   color: white;
+}
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 30px;
 }
 
 /* Media query for tablets and larger phones */
