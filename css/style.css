@@ -289,19 +289,19 @@ nav ul li a.active {
 #skills {
   display: flex;
   flex-direction: row;
+  padding-bottom: 20px;
 }
 
 #skills .set {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
-#skills .set .con1d{
+#skills .set .con1d {
   display: none;
 }
-#skills .set .con1 img {
-  width: 400px;
-  height: 280px;
+#skills .set .conp {
+  margin-left: 60px;
 }
 
 #skills .set .con2 {
@@ -438,16 +438,15 @@ footer #copyright {
     top: 99%;
     left: 0;
     right: 0;
-    background-color:rgb(48, 48, 47);
+    background-color: rgb(48, 48, 47);
     transition: 0.2s linear;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
 
-  header .navbar ul{
+  header .navbar ul {
     display: flex;
     flex-direction: column;
   }
-
 
   #menu-btn.fa-times {
     transform: rotate(90deg);
@@ -467,20 +466,26 @@ footer #copyright {
     grid-template-columns: repeat(1, 1fr);
   }
 
+  #skills .set {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #skills .set .conp{
+    margin-left: 0px;
+   }
+
   #skills .set .con1h {
     display: none;
   }
 
   #skills .set .con1d {
     display: block;
-
   }
-  #skills .set .con1d .myskill{
+  #skills .set .con1d .myskill {
     display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
+    grid-template-columns: repeat(3, 1fr);
   }
-
 
   #skills .set .con2 {
     display: none;
