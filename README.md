@@ -1,6 +1,6 @@
 # my_portfolio
 
-My portfolio website is available on : https://tkdeshan.github.io/my_portfolio/
+This is available on : https://tkdeshan.github.io/my_portfolio/
 
 ### Installation
 1. Clone the repository: https://github.com/tkdeshan/my_portfolio.git
