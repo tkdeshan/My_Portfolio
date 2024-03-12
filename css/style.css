@@ -355,18 +355,21 @@ hr {
   width: 80%;
 }
 
-#skills .hardskill {
+#skills .hardskill,
+#skills .softskill {
   padding-left: 80px;
 }
 
 #skills .hardskill .myskill {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 100px;
 }
 
-#skills .softskill {
-  padding-left: 80px;
+#skills .softskill .mysoftskill {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
 }
 
 #skills .hardskill h1,
@@ -460,17 +463,20 @@ footer #copyright {
     padding-left: 0px;
   }
 
-  #education {
-    flex-direction: column;
-  }
-
   #portfolio .projectDisplay {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  #skills {
+  #skills .hardskill .myskill {
     display: flex;
     flex-direction: column;
+    gap: 0px;
+  }
+
+  #skills .softskill .mysoftskill {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
   }
 }
 
@@ -512,9 +518,5 @@ footer #copyright {
 
   #portfolio .projectDisplay {
     grid-template-columns: repeat(1, 1fr);
-  }
-
-  #other {
-    height: auto;
   }
 }
