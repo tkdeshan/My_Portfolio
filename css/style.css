@@ -64,6 +64,10 @@ header a {
   color: orange;
 }
 
+nav ul li a.active {
+  color: orange;
+}
+
 #menu-btn {
   font-size: 25px;
   cursor: pointer;
@@ -78,76 +82,84 @@ section {
   padding-right: 100px;
 }
 
-/* about section */
-#about {
+/* home section */
+#home {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background-color: #ddd;
-  padding-bottom: 50px;
+  align-items: center;
+  width: 80%;
 }
 
-#about #item1 {
+#home #item1 {
+  width: 40%;
   text-align: center;
   padding: auto;
 }
 
-#about #item1 img {
-  width: 300px;
+#home #item1 img {
+  width: 250px;
   height: auto;
   border-radius: 25%;
 }
 
-#about #item2 {
-  width: 75%;
+#home #item2 {
+  width: 60%;
   text-align: justify;
-  margin-left: 80px;
+  margin-left: 20px;
 }
 
-#about #item2 h1 {
+#home #item2 h2 {
   font-size: 30px;
 }
 
-#about #item2 h4 a {
+#home #item2 h3 {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-color: orange;
+}
+
+#home #item2 h4 a {
   text-decoration: none;
   color: rgb(48, 48, 47);
 }
 
-#about #item2 h4 a:hover {
+#home #item2 h4 a:hover {
   color: orange;
 }
 
-nav ul li a.active {
-  color: orange;
+#home #item2 .resume {
+  margin-bottom: 20px;
 }
 
-#about #item2 .contactlist {
+#home #item2 .contactlist {
   display: flex;
   flex-direction: row;
 }
 
-#about #item2 .private {
+#home #item2 .private {
   display: flex;
   align-items: center;
 }
 
-#about #item2 .social-media {
+#home #item2 .social-media {
   display: flex;
-  gap: 10px;
+  flex-direction: row;
+  gap: 5px;
   padding-left: 50px;
   margin-right: 50px;
 }
 
-#about #item2 .social-media a {
+#home #item2 .social-media a {
   color: rgb(48, 48, 47);
   font-size: 45px;
 }
 
-#about #item2 .social-media a:hover {
+#home #item2 .social-media a:hover {
   color: orange;
 }
 
-#about #item2 #download {
+#home #item2 #download {
   background-color: #ddd;
   padding: 15px;
   border-radius: 50px;
@@ -155,21 +167,72 @@ nav ul li a.active {
   margin-top: 10px;
 }
 
-#about #item2 #download:hover {
+#home #item2 #download:hover {
   color: orange;
+}
+
+/* about section */
+#about {
+  background-color: white;
+  width: 80%;
+}
+
+#about h1 {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-color: orange;
+  padding-left: 80px;
+}
+
+/* expirience section */
+#experience {
+  background-color: white;
+  width: 80%;
+}
+
+#experience h1 {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-color: orange;
+  padding-left: 80px;
+}
+
+.exp {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-left: 80px;
+}
+
+#experience .exp .ex {
+  display: flex;
+  flex-direction: row;
+}
+
+#experience .exp .ex img {
+  width: 60px;
+  height: 60px;
+}
+
+#experience .exp .ex .content {
+  margin-left: 20px;
+}
+
+hr {
+  width: 80%;
 }
 
 /* education section */
 #education {
   background-color: white;
   display: flex;
-  flex-direction: row;
-  padding-bottom: 50px;
+  flex-direction: column;
+  width: 80%;
 }
 
 #education .edu,
 #education .courses {
-  width: 50%;
+  padding-left: 80px;
 }
 
 #education .edu .details,
@@ -208,12 +271,10 @@ nav ul li a.active {
 
 /* portfolio section */
 #portfolio {
-  background-color: #ddd;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  padding-bottom: 50px;
 }
 
 #portfolio .project-buttons {
@@ -228,7 +289,7 @@ nav ul li a.active {
   cursor: pointer;
   font-size: 18px;
   border: none;
-  background-color: #ddd;
+  background-color: white;
   text-decoration: underline;
   font-weight: bold;
 
@@ -254,6 +315,7 @@ nav ul li a.active {
   justify-items: center;
   align-content: center;
 }
+
 #portfolio .project {
   height: 500px;
   width: 300px;
@@ -262,6 +324,7 @@ nav ul li a.active {
   border-radius: 10px;
   background-color: white;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #portfolio .project img {
@@ -289,48 +352,25 @@ nav ul li a.active {
 #skills {
   display: flex;
   flex-direction: row;
-  padding-bottom: 20px;
+  width: 80%;
 }
 
-#skills .set {
+#skills .hardskill {
+  padding-left: 80px;
+}
+
+#skills .hardskill .myskill {
   display: flex;
   flex-direction: row;
+  gap: 20px;
 }
 
-#skills .set .con1d {
-  display: none;
-}
-#skills .set .conp {
-  margin-left: 60px;
+#skills .softskill {
+  padding-left: 80px;
 }
 
-#skills .set .con2 {
-  text-align: center;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  flex-direction: column;
-}
-
-#skills .set .con2 i {
-  width: 80px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 15px;
-  padding-bottom: 5px;
-  border-radius: 5px;
-  font-size: 50px;
-  background-color: orange;
-  margin: 5px;
-  line-height: 0.5;
-}
-
-#skills .set .con2 i span {
-  font-size: 15px;
-}
-
-#skills .set h1 {
+#skills .hardskill h1,
+#skills .softskill h1 {
   text-decoration: underline;
   text-underline-offset: 6px;
   text-decoration-color: orange;
@@ -338,16 +378,19 @@ nav ul li a.active {
 
 /* other section */
 #other {
-  height: 55vh;
-  background-color: #ddd;
+  padding-bottom: 20px;
   display: flex;
-  align-items: center;
+  width: 80%;
 }
 
 #other h2 {
   text-decoration: underline;
   text-underline-offset: 6px;
   text-decoration-color: orange;
+}
+
+#other .content {
+  padding-left: 80px;
 }
 
 #other p span {
@@ -365,7 +408,7 @@ footer {
   color: white;
   text-align: center;
   align-items: center;
-  padding-bottom: 50px;
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 
@@ -403,17 +446,17 @@ footer #copyright {
 
 /* Media query for tablets and larger phones */
 @media screen and (max-width: 1024px) {
-  #about {
+  #home {
     height: auto;
     display: flex;
     flex-direction: column;
   }
 
-  #about #item2 .contactlist {
+  #home #item2 .contactlist {
     flex-direction: column;
   }
 
-  #about #item2 .social-media {
+  #home #item2 .social-media {
     padding-left: 0px;
   }
 
@@ -423,6 +466,11 @@ footer #copyright {
 
   #portfolio .projectDisplay {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  #skills {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -464,31 +512,6 @@ footer #copyright {
 
   #portfolio .projectDisplay {
     grid-template-columns: repeat(1, 1fr);
-  }
-
-  #skills .set {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #skills .set .conp{
-    margin-left: 0px;
-   }
-
-  #skills .set .con1h {
-    display: none;
-  }
-
-  #skills .set .con1d {
-    display: block;
-  }
-  #skills .set .con1d .myskill {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  #skills .set .con2 {
-    display: none;
   }
 
   #other {
