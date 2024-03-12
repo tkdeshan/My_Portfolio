@@ -84,39 +84,43 @@ section {
 
 /* home section */
 #home {
+  padding-top: 0px;
   display: flex;
   flex-direction: row;
+  gap: 50px;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  padding-right: 200px;
+  padding-left: 200px;
+  height: 90vh;
+  background: linear-gradient(to right, #ff8c00, #eb6a3b);
 }
 
 #home #item1 {
-  width: 40%;
   text-align: center;
   padding: auto;
 }
 
 #home #item1 img {
-  width: 250px;
+  width: 300px;
   height: auto;
   border-radius: 25%;
 }
 
 #home #item2 {
-  width: 60%;
   text-align: justify;
-  margin-left: 20px;
 }
 
 #home #item2 h2 {
   font-size: 30px;
+  letter-spacing: 4px;
 }
 
 #home #item2 h3 {
   text-decoration: underline;
   text-underline-offset: 6px;
-  text-decoration-color: orange;
+  text-decoration-color: black;
+  letter-spacing: 2px;
 }
 
 #home #item2 h4 a {
@@ -142,6 +146,10 @@ section {
   align-items: center;
 }
 
+#home #item2 .private a:hover {
+  color: white;
+}
+
 #home #item2 .social-media {
   display: flex;
   flex-direction: row;
@@ -156,11 +164,11 @@ section {
 }
 
 #home #item2 .social-media a:hover {
-  color: orange;
+  color: white;
 }
 
 #home #item2 #download {
-  background-color: #ddd;
+  background: linear-gradient(to right, #baeb90, #07da1c);
   padding: 15px;
   border-radius: 50px;
   font-size: 15px;
@@ -168,11 +176,11 @@ section {
 }
 
 #home #item2 #download:hover {
-  color: orange;
+  color: white;
 }
 
 /* about section */
-#about {
+/* #about {
   background-color: white;
   width: 80%;
 }
@@ -182,7 +190,7 @@ section {
   text-underline-offset: 6px;
   text-decoration-color: orange;
   padding-left: 80px;
-}
+} */
 
 /* expirience section */
 #experience {
