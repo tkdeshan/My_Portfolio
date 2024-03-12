@@ -120,7 +120,7 @@ section {
   text-decoration: underline;
   text-underline-offset: 6px;
   text-decoration-color: black;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 #home #item2 h4 a {
