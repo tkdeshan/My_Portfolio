@@ -113,6 +113,12 @@ section {
   font-size: 30px;
 }
 
+#home #item2 h3 {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-color: orange;
+}
+
 #home #item2 h4 a {
   text-decoration: none;
   color: rgb(48, 48, 47);
