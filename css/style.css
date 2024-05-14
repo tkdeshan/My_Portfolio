@@ -90,10 +90,11 @@ section {
   gap: 50px;
   justify-content: center;
   align-items: center;
-  padding-right: 200px;
-  padding-left: 200px;
-  height: 90vh;
-  background: linear-gradient(to right, #efd1c7, #f66430);
+  padding-right: 100px;
+  padding-left: 100px;
+  padding-bottom: 20px;
+  min-height: 90vh;
+  background: linear-gradient(to right, #a1ed6b, #38ef35);
 }
 
 #home #item1 {
