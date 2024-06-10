@@ -451,6 +451,12 @@ footer #copyright {
 }
 
 /* Media query for tablets and larger phones */
+@media screen and (max-width: 1180px) {
+  #portfolio .projectDisplay {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media screen and (max-width: 1024px) {
   #home {
     height: auto;
@@ -464,10 +470,6 @@ footer #copyright {
 
   #home #item2 .social-media {
     padding-left: 0px;
-  }
-
-  #portfolio .projectDisplay {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   #skills .hardskill .myskill {
@@ -506,7 +508,7 @@ footer #copyright {
 
   section {
     padding-left: 50px;
-    padding-right: 5px;
+    padding-right: 50px;
   }
 }
 
