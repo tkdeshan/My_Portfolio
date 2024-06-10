@@ -529,6 +529,7 @@ footer #copyright {
   header .navbar ul {
     display: flex;
     flex-direction: column;
+    padding-inline-start: initial;
   }
 
   #menu-btn.fa-times {
