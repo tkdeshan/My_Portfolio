@@ -89,11 +89,10 @@ section {
   gap: 50px;
   justify-content: center;
   align-items: center;
-  padding-right: 100px;
-  padding-left: 100px;
+  padding-right: 50px;
+  padding-left: 50px;
   padding-bottom: 20px;
   min-height: 90vh;
-  background: linear-gradient(to right, #a1ed6b, #38ef35);
 }
 
 #home #item1 {
@@ -147,7 +146,7 @@ section {
 }
 
 #home #item2 .private a:hover {
-  color: white;
+  color: orange;
 }
 
 #home #item2 .social-media {
@@ -163,16 +162,23 @@ section {
   font-size: 45px;
 }
 
+#home #item2 .social-media a img {
+  padding-top: 10px;
+  width: 50px;
+  height: 50px;
+}
+
 #home #item2 .social-media a:hover {
-  color: white;
+  color: orange;
 }
 
 #home #item2 #download {
-  background: linear-gradient(to right, #baeb90, #07da1c);
+  background: linear-gradient(to right, #f0c88c, #ebb027);
   padding: 15px;
   border-radius: 50px;
   font-size: 15px;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 #home #item2 #download:hover {
@@ -182,21 +188,18 @@ section {
 /* expirience section */
 #experience {
   background-color: white;
-  width: 80%;
 }
 
 #experience h1 {
   text-decoration: underline;
   text-underline-offset: 6px;
   text-decoration-color: orange;
-  padding-left: 80px;
 }
 
 .exp {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
-  padding-left: 80px;
 }
 
 #experience .exp .ex {
@@ -227,11 +230,6 @@ hr {
   display: flex;
   flex-direction: column;
   width: 80%;
-}
-
-#education .edu,
-#education .courses {
-  padding-left: 80px;
 }
 
 #education .edu .details,
@@ -358,11 +356,6 @@ hr {
   width: 80%;
 }
 
-#skills .hardskill,
-#skills .softskill {
-  padding-left: 80px;
-}
-
 #skills .hardskill .myskill {
   display: flex;
   flex-direction: row;
@@ -395,10 +388,6 @@ hr {
   text-decoration-color: orange;
 }
 
-#other .content {
-  padding-left: 80px;
-}
-
 #other p span {
   font-weight: bold;
   font-size: 20px;
@@ -429,12 +418,24 @@ footer .social-media a {
   font-size: 50px;
 }
 
+footer .social-media a img {
+  width: 50px;
+  height: 50px;
+  padding-top: 15px;
+  border-radius: 5px;
+}
+
 footer .social-media a:hover {
   color: orange;
 }
 
 footer #copyright {
   color: white;
+}
+
+footer #logoimg {
+  width: 100px;
+  height: 100px;
 }
 
 #scrollToTopBtn {
@@ -554,8 +555,57 @@ footer #copyright {
 }
 
 @media screen and (max-width: 640px) {
+  #scrollToTopBtn {
+    bottom: 20px;
+    right: 20px;
+    padding: 5px;
+    font-size: 20px;
+  }
+
+  #home {
+    gap: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+  }
+
   #home #item1 img {
     width: 380px;
+  }
+
+  section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #home #item2 .social-media a {
+    font-size: 30px;
+  }
+
+  #home #item2 .social-media a img {
+    padding-top: 8px;
+    width: 30px;
+    height: 30px;
+  }
+
+  footer .social-media {
+    gap: 15px;
+  }
+
+  footer .social-media a {
+    font-size: 30px;
+  }
+
+  footer .social-media a img {
+    width: 25px;
+    height: 25px;
+    padding-top: 10px;
+    border-radius: 5px;
+  }
+
+  footer #logoimg {
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -571,5 +621,14 @@ footer #copyright {
   #home #item2 h2 {
     font-size: 25px;
     letter-spacing: 2px;
+  }
+
+  section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  footer #copyright {
+    font-size: 10px;
   }
 }
