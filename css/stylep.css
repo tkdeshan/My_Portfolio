@@ -27,7 +27,7 @@ body {
   border-radius: 50%;
 }
 
-#slide{
+#slide {
   width: 80%;
 }
 
@@ -38,15 +38,14 @@ body {
 ul li {
   color: #aca7a7;
 }
-ul #link{
-  padding-bottom: 20px;
-}
-ul li p {
-  color: rgb(74, 74, 68);
-}
 
 ul #link {
   list-style-type: none;
+  padding-bottom: 20px;
+}
+
+ul li p {
+  color: rgb(74, 74, 68);
 }
 
 ul #link a {
@@ -62,3 +61,24 @@ ul li span {
   color: rgb(70, 70, 66);
 }
 
+@media screen and (max-width: 1024px) {
+  body {
+    margin-left: 150px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin-right: 80px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    margin-left: 40px;
+    margin-top: 100px;
+    margin-right: 40px;
+  }
+
+  #backHome {
+    top: 20px;
+    left: 20px;
+  }
+}

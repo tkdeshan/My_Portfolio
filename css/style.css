@@ -48,7 +48,6 @@ header a {
 .navbar ul {
   list-style: none;
   display: flex;
-  margin-right: 100px;
 }
 
 .navbar ul li {
@@ -214,6 +213,10 @@ section {
   margin-left: 20px;
 }
 
+#experience .exp .ex .content ul {
+  padding-inline-start: initial;
+}
+
 hr {
   width: 80%;
 }
@@ -252,6 +255,10 @@ hr {
 #education .edu .details .image #curve,
 #education .courses .details .image #curve {
   border-radius: 50%;
+}
+
+#education .edu .details .content ul {
+  padding-inline-start: initial;
 }
 
 #education .courses .details .content p a {
@@ -444,6 +451,12 @@ footer #copyright {
 }
 
 /* Media query for tablets and larger phones */
+@media screen and (max-width: 1180px) {
+  #portfolio .projectDisplay {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media screen and (max-width: 1024px) {
   #home {
     height: auto;
@@ -457,10 +470,6 @@ footer #copyright {
 
   #home #item2 .social-media {
     padding-left: 0px;
-  }
-
-  #portfolio .projectDisplay {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   #skills .hardskill .myskill {
@@ -499,13 +508,12 @@ footer #copyright {
 
   section {
     padding-left: 50px;
-    padding-right: 5px;
+    padding-right: 50px;
   }
 }
 
 @media screen and (max-width: 768px) {
   #menu-btn {
-    margin-right: 50px;
     display: inline-block;
     transition: 0.2s linear;
   }
@@ -523,6 +531,7 @@ footer #copyright {
   header .navbar ul {
     display: flex;
     flex-direction: column;
+    padding-inline-start: initial;
   }
 
   #menu-btn.fa-times {
@@ -541,5 +550,26 @@ footer #copyright {
 
   #portfolio .projectDisplay {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #home #item1 img {
+    width: 380px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #home #item1 img {
+    width: 300px;
+  }
+
+  #home #item2 {
+    text-align: start;
+  }
+
+  #home #item2 h2 {
+    font-size: 25px;
+    letter-spacing: 2px;
   }
 }
